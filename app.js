@@ -71,6 +71,50 @@ function consumedTotals(dm){
   }
   return {P,C,F,K};
 }
+
+function renderDailyBars() {
+  const root = $('#dailyBars');
+  if (!root) return;
+  root.innerHTML = '';
+
+  for (const d of DAYS) {
+    const dm = state.week.get(d);
+    if (!dm) continue;
+
+    const plan = totals(dm);
+    const done = consumedTotals(dm);
+
+    const div = document.createElement('div');
+    div.className = 'daySummaryTile cardStyle';
+    div.innerHTML = `
+      <div class="daySummaryHeader">
+        <strong>${d}</strong>
+        <span>${Math.round(done.K)} / ${Math.round(plan.K)} kcal</span>
+      </div>
+      <div class="macroBarsWrap">
+        <div class="macroBar calories">
+          <div class="macroLabel">Calories: ${Math.round(done.K)} / ${Math.round(plan.K)} kcal</div>
+          <div class="progress"><span style="width:${Math.min(100, (done.K/(plan.K||1))*100)}%"></span></div>
+        </div>
+        <div class="macroBar protein">
+          <div class="macroLabel">Protein: ${Math.round(done.P)} / ${Math.round(plan.P)} g</div>
+          <div class="progress"><span style="width:${Math.min(100, (done.P/(plan.P||1))*100)}%"></span></div>
+        </div>
+        <div class="macroBar carbs">
+          <div class="macroLabel">Carbs: ${Math.round(done.C)} / ${Math.round(plan.C)} g</div>
+          <div class="progress"><span style="width:${Math.min(100, (done.C/(plan.C||1))*100)}%"></span></div>
+        </div>
+        <div class="macroBar fats">
+          <div class="macroLabel">Fat: ${Math.round(done.F)} / ${Math.round(plan.F)} g</div>
+          <div class="progress"><span style="width:${Math.min(100, (done.F/(plan.F||1))*100)}%"></span></div>
+        </div>
+      </div>
+    `;
+    root.appendChild(div);
+  }
+}
+
+
 function persist(){
   const o={};
   for(const d of DAYS){
@@ -178,7 +222,7 @@ function dayCard(day){
   card.appendChild(h);
 
   // macro bars
-  card.appendChild(dayBars(dm));
+  //card.appendChild(dayBars(dm));
 
   for(const mt of MEAL_ORDER){
     const obj=dm.get(mt); if(obj) card.appendChild(mealRow(day,mt,obj));
@@ -196,7 +240,64 @@ function renderWeek(){
   for(const d of DAYS) root.appendChild(dayCard(d));
 }
 
-function renderIngredients(){ /* unchanged */ }
+function renderIngredients() {
+  const buckets = new Map([
+    ['Breakfast', new Map()],
+    ['Lunch', new Map()],
+    ['Dinner', new Map()],
+    ['Snacks', new Map()],
+  ]);
+
+  for (const d of DAYS) {
+    const dm = state.week.get(d);
+    if (!dm) continue;
+
+    for (const mt of MEAL_ORDER) {
+      const obj = dm.get(mt);
+      if (!obj || !obj.item) continue;
+      const it = obj.item;
+
+      // classify buckets
+      let bucket = 'Snacks';
+      if (mt === 'Breakfast') bucket = 'Breakfast';
+      else if (mt === 'Lunch') bucket = 'Lunch';
+      else if (mt === 'Dinner') bucket = 'Dinner';
+
+      (it.Ingredients || '')
+        .split(';')
+        .map(s => s.trim())
+        .filter(Boolean)
+        .forEach(tok => {
+          const m = buckets.get(bucket);
+          m.set(tok, (m.get(tok) || 0) + 1);
+        });
+    }
+  }
+
+  const root = $('#ingBuckets');
+  root.innerHTML = '';
+
+  for (const [bucket, map] of buckets.entries()) {
+    const div = document.createElement('div');
+    div.className = 'bucket';
+    const h = document.createElement('h3');
+    h.textContent = bucket;
+    div.appendChild(h);
+
+    const ul = document.createElement('ul');
+    for (const [name, count] of Array.from(map.entries()).sort(
+      (a, b) => a[0].localeCompare(b[0])
+    )) {
+      const li = document.createElement('li');
+      li.textContent = count > 1 ? `${name} ×${count}` : name;
+      ul.appendChild(li);
+    }
+
+    div.appendChild(ul);
+    root.appendChild(div);
+  }
+}
+
 
 // picker unchanged
 let currentPick={day:null,mealType:null};
@@ -232,7 +333,11 @@ function applyTheme(t){ document.documentElement.setAttribute('data-theme',t); l
 function initTheme(){ const t=localStorage.getItem('theme-v5_2-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'); applyTheme(t); }
 function toggleTheme(){ const cur=document.documentElement.getAttribute('data-theme'); applyTheme(cur==='dark'?'light':'dark'); }
 
-function renderAll(){ renderWeek(); renderIngredients(); }
+function renderAll() {
+  renderDailyBars();   // ✅ add this back
+  renderWeek();
+  renderIngredients();
+}
 
 document.addEventListener('DOMContentLoaded',()=>{
   $('#printBtn').onclick=()=>window.print();
