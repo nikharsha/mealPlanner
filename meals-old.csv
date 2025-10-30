@@ -1,0 +1,37 @@
+MealType,Name,Ingredients,Protein,Carbs,Fat
+Early Morning,Warm water + turmeric + flaxseed + 4 soaked almonds,water;turmeric;flaxseed powder;almonds,2,3,7
+Early Morning,Jeera-mint infused warm water + 1 small banana,water;cumin seeds;mint leaves;banana (small),1,23,0
+Early Morning,Tulsi-ginger tea + 5 soaked walnuts,tulsi tea;ginger;walnuts (soaked),4,2,12
+Early Morning,Buttermilk (plain) with pinch of black salt + mint,buttermilk;mint;black salt,4,4,2
+Breakfast,Idli (2) + Sambar + 1 boiled egg,idli;urad dal;rice rava;sambar vegetables;toor dal;spices;egg (boiled),20,50,8
+Breakfast,Ragi dosa (2) + coconut chutney (2 tbsp),ragi flour;urad dal;curd;coconut;green chilli;ginger,12,45,12
+Breakfast,Vegetable upma (jowar) + curd (1/2 cup),jowar rava;mixed vegetables;curd;mustard;curry leaves,12,48,7
+Breakfast,Moong dal chilla (2) + paneer (40g) stuffing,moong dal;paneer;coriander;green chilli,22,28,11
+Breakfast,Oats vegetable uttapam (2) + tomato chutney,oats;semolina;vegetables;tomato;mustard;spices,14,42,6
+Breakfast,Quinoa pongal (1 bowl) with pepper-cumin tadka,quinoa;moong dal;pepper;cumin;ginger;ghee (1 tsp),16,36,7
+Breakfast,Millet idli (2) + mint-coriander chutney + egg white (2),little millet;urad dal;mint;coriander;egg whites,20,38,4
+Mid-Morning,Plain buttermilk (1 glass) with mint + pinch black salt,buttermilk;mint;black salt,5,5,2
+Mid-Morning,Fresh guava (1) + 5 almonds,guava;almonds,6,22,9
+Mid-Morning,Papaya bowl + pumpkin seeds (1 tbsp),papaya;pumpkin seeds,5,18,6
+Mid-Morning,Amla (2) + tender coconut water (200 ml),amla;tender coconut water,1,10,0
+Lunch,Millet roti (2) + palakura pappu (spinach dal) + veg stir-fry,millet flour;spinach;toor dal;garlic;spices;mixed vegetables,22,60,9
+Lunch,Red rice (1 cup cooked) + vegetable kurma (1 cup),red rice;mixed vegetables;coconut;spices,10,62,12
+Lunch,Brown rice (3/4 cup) + sambar (1 cup) + curd (1/2 cup),brown rice;toor dal;vegetables;spices;curd,14,58,6
+Lunch,Quinoa (1 cup) + rajma sundal (3/4 cup) + salad,quinoa;rajma;coconut;mustard;salad vegetables,18,54,8
+Lunch,"Lemon rice (little millet 1 cup) + egg white bhurji (3 whites)",little millet;lemon;mustard;curry leaves;egg whites,20,52,6
+Lunch,Vegetable sambar + 2 phulkas (no oil) + salad,whole-wheat flour;toor dal;vegetables;spices,16,55,5
+Evening Snack,Roasted chana (1/2 cup) + apple,roasted chana;apple,11,35,2
+Evening Snack,Green tea + 5 walnuts + 1 pear,green tea;walnuts;pear,5,25,12
+Evening Snack,Sprouts sundal (moong) with veggies,sprouted moong;coconut;mustard;carrot;curry leaves,10,20,5
+Evening Snack,Greek yogurt (150g) + mixed berries,greek yogurt;strawberries;blueberries,14,18,2
+Post-Rehab,Whey protein (1 scoop) in water + 1/2 banana,whey protein;water;banana,24,13,2
+Post-Rehab,"Plant protein (1 scoop) in milk (low-fat 150ml)",plant protein;low-fat milk,22,9,3
+Post-Rehab,Egg white omelette (3 whites) + toast (millet),egg whites;onion;tomato;millet bread,20,18,3
+Dinner,Vegetable dal soup (1 bowl) + jowar roti (1) + paneer scramble (50g),moong dal;carrot;beans;spices;jowar flour;paneer,24,38,10
+Dinner,Quinoa upma (1 bowl) + curd (1/2 cup),quinoa;mixed vegetables;curd;mustard;ginger,14,34,5
+Dinner,Mixed veg sambar (1 cup) + little millet idli (2),toor dal;vegetables;spices;little millet;urad dal,16,40,4
+Dinner,Tomato rasam + steamed vegetables + red rice (1/2 cup),tomato;rasam spices;steamed vegetables;red rice,7,32,2
+Dinner,Palak paneer (150g light) + 1 phulka (no oil),spinach;paneer;garlic;spices;whole-wheat flour,22,18,11
+Bedtime,Warm turmeric milk (low-fat - 1 cup) + pinch cinnamon + black pepper,low-fat milk;turmeric;cinnamon;black pepper,8,10,4
+Bedtime,Kefir (200 ml) + chia (1 tsp),kefir;chia seeds,8,8,4
+Bedtime,Buttermilk (small glass) + roasted jeera,buttermilk;cumin powder;rock salt,4,4,2

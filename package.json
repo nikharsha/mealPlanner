@@ -1,0 +1,12 @@
+{
+  "name": "weekly-meal-planner-v5_1",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "http-server -c-1 -p 5173 .",
+    "start": "http-server -c-1 -p 5173 ."
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

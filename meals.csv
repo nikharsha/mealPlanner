@@ -1,0 +1,83 @@
+MealType,Name,Ingredients,Protein,Carbs,Fat
+Early Morning,Soaked almonds; cashews; walnuts + warm water with raisins,almonds;cashews;walnuts;raisins;warm water,6,12,15
+Early Morning,Soaked almonds; cashews; walnuts + jeera infused warm water,almonds;cashews;walnuts;jeera;warm water,6,8,14
+Early Morning,Soaked almonds; cashews; walnuts + tulsi ginger tea,almonds;cashews;walnuts;tulsi;ginger tea,6,6,13
+Early Morning,Soaked almonds; cashews; walnuts + buttermilk (greek yogurt),almonds;cashews;walnuts;greek yogurt;water,7,10,14
+Breakfast,Bread omelette (2 eggs; 2 whole wheat slices),eggs;whole wheat bread;olive oil;onions;green chili,17,22,12
+Breakfast,Vegetable rawa upma (semolina) with ghee + 1 egg,semolina;vegetables;ghee;egg,15,35,14
+Breakfast,Vegetable vermicelli upma with ghee + 1 egg,vermicelli;vegetables;ghee;egg,16,40,13
+Breakfast,Idli (3) + coconut chutney + 1 egg,idli;coconut chutney;egg,17,38,11
+Breakfast,Dosa (2) + peanut chutney + 1 egg,dosa;peanut chutney;egg,18,40,14
+Breakfast,Pesarettu (2) + chutney + 1 egg,green gram;chutney;egg,19,28,11
+Breakfast,Khichdi + ghee,rice;moong dal;vegetables;ghee,12,42,9
+Breakfast,Curd rice (with buffalo curd),white rice;buffalo curd;seasoning;ginger;green chili,9,45,10
+Breakfast,Pongal + ghee,rice;moong dal;black pepper;ghee;cashews,11,38,12
+Breakfast,Wheat roti with egg curry,wheat flour;egg;onion;tomato;spices,20,35,11
+Breakfast,Phulka (3) + paneer curry,wheat flour;paneer;tomato;onion;spices,22,32,14
+Breakfast,Vegetable poha with peanuts + 1 boiled egg,flattened rice;vegetables;peanuts;egg,15,36,12
+Breakfast,Oats porridge with milk and nuts,oats;milk;almonds;walnuts;honey,12,42,9
+Breakfast,Masala oats + 1 boiled egg,oats;vegetables;egg;spices,16,38,9
+Breakfast,Besan chilla (2) + green chutney,gram flour;onion;tomato;chili;chutney,14,24,6
+Breakfast,Stuffed paneer paratha + curd,wheat flour;paneer;spices;curd,20,35,10
+Breakfast,Sabudana khichdi + curd,sago pearls;peanuts;potato;curd,9,46,12
+Breakfast,Vegetable sandwich + boiled egg,bread;vegetables;butter;egg,14,34,10
+Breakfast,Egg bhurji + 1 phulka,egg;onion;tomato;wheat flour,20,18,10
+Breakfast,Ragi dosa + chutney + egg,ragi;chutney;egg,17,28,9
+Breakfast,Vegetable paratha + curd,wheat flour;vegetables;spices;curd,14,36,9
+Mid-Morning,Protein shake (25g whey; nuts; banana; seeds),whey isolate;banana;walnuts;dates;chia;flaxseed,30,24,9
+Mid-Morning,Greek yogurt cup + fruit,greek yogurt;apple;berries,9,18,4
+Mid-Morning,Coconut water + boiled egg,coconut water;egg,8,6,6
+Mid-Morning,Sprout salad with lemon,sprouts;onion;tomato;lemon,9,14,1
+Mid-Morning,Corn chaat,boiled corn;onion;tomato;chili;lemon,5,28,3
+Lunch,Dal + spinach + 1 veg curry + curd + white rice,toor dal;spinach;vegetables;curd;white rice,21,62,14
+Lunch,Roti + mixed vegetable curry,wheat flour;mixed vegetables;onion;tomato;oil,12,46,9
+Lunch,Roti + egg curry,wheat flour;egg;onion;tomato;spices,20,35,12
+Lunch,Veg biryani + cucumber raita (greek yogurt),basmati rice;vegetables;ghee;greek yogurt;cucumber,16,58,15
+Lunch,Jeera rice + paneer curry,white rice;paneer;jeera;spices;onion;tomato,22,54,16
+Lunch,Sambar rice,white rice;toor dal;vegetables;sambar powder;ghee,14,60,11
+Lunch,Egg fried rice,white rice;egg;spring onion;soy sauce;oil,20,52,13
+Lunch,Veg pulao + raita,basmati rice;vegetables;ghee;greek yogurt,15,55,12
+Lunch,Palak paneer + 2 phulkas,spinach;paneer;wheat flour;spices,23,30,13
+Lunch,Chole masala + jeera rice,chickpeas;white rice;spices;tomato;onion,18,58,9
+Lunch,Rajma curry + rice,kidney beans;white rice;tomato;onion;spices,19,56,8
+Lunch,Bhindi masala + roti,ladyfinger;onion;tomato;spices;wheat flour,10,42,8
+Lunch,Aloo gobi + roti,potato;cauliflower;wheat flour;spices,9,44,10
+Lunch,Vegetable kurma + parotta,vegetables;coconut;cashew;spices;maida,10,48,14
+Lunch,Veg kadai + jeera rice,vegetables;capsicum;tomato;white rice;spices,16,55,12
+Lunch,Tawa paneer + roti,paneer;onion;tomato;spices;wheat flour,25,34,14
+Lunch,Lauki curry + rice,bottle gourd;tomato;white rice;spices,9,50,8
+Lunch,Drumstick sambar + rice,drumstick;dal;white rice;spices,14,56,10
+Lunch,Aloo beans curry + phulka,potato;beans;wheat flour;spices,9,45,9
+Lunch,Vegetarian thali (rice + roti + dal + curry + curd),rice;roti;dal;vegetable;curd,24,70,17
+Evening Snack,Fruit (apple / pomegranate / orange),apple;orange;pomegranate,1,22,0
+Evening Snack,Honey amla pieces (2 tbsp),amla;honey,0,12,0
+Evening Snack,Greek yogurt cup,greek yogurt,8,12,3
+Evening Snack,Dry fruit trail mix (34g),almonds;walnuts;cashews;raisins;cranberries,6,16,9
+Evening Snack,Paneer cubes pan-fried (60g),paneer;olive oil;spices,14,3,10
+Evening Snack,Clean protein bar (18g protein),protein blend;dates;nuts,18,24,8
+Evening Snack,Masala chai + roasted chana (30g),tea;milk;spices;roasted chana,9,14,3
+Evening Snack,Carrot sticks + hummus,carrot;hummus;olive oil;chickpeas,4,8,5
+Evening Snack,Steamed dhokla,besan;curd;lemon;spices,6,15,5
+Evening Snack,Roasted makhana (30g),makhana;ghee;spices,5,12,6
+Evening Snack,Masala sweet potato cubes,sweet potato;olive oil;spices,3,26,4
+Evening Snack,Peanut chikki (small piece),peanuts;jaggery,5,18,7
+Dinner,Dosa (2) + chutney + egg,dosa;peanut chutney;egg,18,40,13
+Dinner,Curd rice (buffalo curd),white rice;buffalo curd;seasoning,9,45,10
+Dinner,Millet roti (2) + dal curry,millet flour;toor dal;spices;ghee,17,42,11
+Dinner,Vegetable sambar + 2 phulkas + curd,vegetables;dal;wheat flour;curd,18,52,10
+Dinner,Veg khichdi + ghee,rice;moong dal;vegetables;ghee,13,44,9
+Dinner,Egg curry + 2 wheat rotis,egg;wheat flour;tomato;onion;spices,22,38,12
+Dinner,Paneer bhurji + 2 rotis,paneer;onion;tomato;spices;wheat flour,25,36,14
+Dinner,Vegetable pulao + raita,basmati rice;vegetables;greek yogurt,15,55,11
+Dinner,Mixed veg curry + 2 phulkas,mixed vegetables;onion;tomato;spices;wheat flour,14,48,9
+Dinner,Egg fried rice,white rice;egg;onion;soy sauce;oil,20,52,13
+Dinner,Oats khichdi,oats;moong dal;vegetables;ghee,13,42,8
+Dinner,Quinoa upma,quinoa;vegetables;spices;ghee,12,40,9
+Dinner,Moong dal chilla + chutney,moong dal;onion;tomato;chutney,15,24,7
+Dinner,Veg stew + appam,vegetables;coconut milk;appam;spices,10,50,12
+Dinner,Light pongal,rice;moong dal;black pepper;ghee,10,36,8
+Dinner,Idiyappam + kurma,idiyappam;vegetable kurma;coconut milk,9,46,10
+Dinner,Dal soup + toast,dal;spices;wheat bread,10,28,5
+Dinner,Tomato rasam + rice,tomato;dal;rice;spices,9,40,6
+Bedtime,Warm turmeric milk (low-fat; 1 cup) + cinnamon + black pepper,low-fat milk;turmeric;cinnamon;black pepper,8,10,4
+Bedtime,Buttermilk (small glass) + roasted jeera,greek yogurt;water;roasted jeera;salt,5,6,2

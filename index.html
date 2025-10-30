@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weekly Meal Planner — v5.1</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>Meal Planner</h1>
+      <div class="meta">Weekly view • Goal 1650–1700 kcal/day</div>
+    </div>
+    <div class="actions">
+      <button id="themeToggle" class="btn ghost" title="Toggle theme">🌙</button>
+      <button id="printBtn" class="btn ghost">🖨 Print</button>
+      <button id="regenBtn" class="btn">Regenerate Week</button>
+    </div>
+  </header>
+
+  <section id="dailyBars" class="dailyBars"></section>
+  <section id="week" class="weekGrid"></section>
+
+  <section id="ingredients" class="ingredients">
+    <h2>Ingredients by Meal Type</h2>
+    <div id="ingBuckets" class="ingBuckets"></div>
+  </section>
+
+  <footer class="foot">
+    <small>Click ✏️ to change a dish. Plan persists until you regenerate. Print: meals on page 1, ingredients on page 2.</small>
+  </footer>
+
+  <div id="picker" class="picker hidden" role="dialog" aria-modal="true">
+    <div class="pickerCard">
+      <div class="pickerHead">
+        <div class="pickerTitle">Change meal</div>
+        <button id="pickerClose" class="iconBtn">✕</button>
+      </div>
+      <input id="pickerSearch" class="pickerSearch" placeholder="Search…" />
+      <ul id="pickerList" class="pickerList"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

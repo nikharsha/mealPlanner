@@ -1,0 +1,66 @@
+/* v5.1 — Optimized Modern Edition */
+:root{
+  --bg:#0B1020; --card:#121A3A; --ink:#EAF0FF; --muted:#A8B0D6; --line:#26325E;
+  --accent: #7DD3FC; --p:#A78BFA; --c:#34D399; --f:#FB7185; --k:#60A5FA;
+  --bar-bg: #1a2247;
+}
+html[data-theme="light"]{
+  --bg:#F8FAFF; --card:#FFFFFF; --ink:#0B1020; --muted:#64748B; --line:#E5E7EB;
+  --accent:#06B6D4; --p:#7C3AED; --c:#059669; --f:#DC2626; --k:#2563EB;
+  --bar-bg:#EDF2F7;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Arial}
+h1,h2,h3{font-family:Poppins,Inter,system-ui,Arial;margin:0}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5}
+.brand h1{font-size:22px}
+.brand .meta{font-size:12px;color:var(--muted);margin-top:4px}
+.btn{border:none;border-radius:12px;padding:8px 12px;background:linear-gradient(135deg,#8B5CF6,#06B6D4);color:#fff;font-weight:700;cursor:pointer;margin-left:8px}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.iconBtn{border:none;background:transparent;color:var(--ink);cursor:pointer;font-size:16px}
+/* Daily bars row */
+.dailyBars{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;padding:12px 20px;break-inside:avoid;page-break-inside:avoid}
+.dayBar{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 10px}
+.dayBar .head{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:12px;margin-bottom:6px}
+.progress{height:6px;border-radius:6px;background:var(--bar-bg);overflow:hidden}
+.progress > span{display:block;height:100%;background:var(--k);width:0;transition:width .4s ease}
+.metaRow{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:6px}
+/* Week grid */
+.weekGrid{padding:10px 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.day{background:var(--card);border:1px solid var(--line);border-radius:14px;break-inside:avoid;page-break-inside:avoid;display:flex;flex-direction:column}
+.dayHeader{padding:10px 12px;border-bottom:1px solid var(--line);font-weight:800;letter-spacing:.5px}
+.meal{padding:10px 12px;border-top:1px dashed var(--line)}
+.meal:first-of-type{border-top:none}
+.meal .row1{display:flex;justify-content:space-between;align-items:center}
+.meal .mTitle{font-weight:700;font-size:8px;display:flex;gap:8px;align-items:center}
+.meal .edit{opacity:.8;margin-left:8px}
+.meal .dish{margin-top:2px; font-size: 12px}
+.meal .mac{color:var(--muted);font-size:8px}
+.dayFooter{padding:8px 12px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+/* Popup picker */
+.picker{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center}
+.picker.hidden{display:none}
+.pickerCard{width:520px;max-height:70vh;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.pickerHead{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-bottom:1px solid var(--line)}
+.pickerSearch{width:100%;padding:8px 10px;border:none;border-bottom:1px solid var(--line);background:transparent;color:var(--ink)}
+.pickerList{list-style:none;margin:0;padding:0;max-height:50vh;overflow:auto}
+.pickerList li{padding:10px 12px;border-bottom:1px solid var(--line);cursor:pointer}
+.pickerList li:hover{background:rgba(125,211,252,.1)}
+/* Ingredients page */
+.ingredients{page-break-before:always;padding:16px 20px}
+.ingredients h2{font-size:14px;margin-bottom:10px}
+.ingBuckets{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.bucket{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;break-inside:avoid; font-size: 12px;}
+.bucket h3{margin:0 0 6px;font-size:12px}
+.bucket ul{margin:0;padding-left:18px}
+/* Footer */
+.foot{padding:12px 20px;color:var(--muted)}
+/* Print */
+@media print{
+  @page{size:A4 landscape;margin:10mm}
+  .topbar,.foot,.picker{display:none!important}
+  body{background:#fff;color:#000}
+  .day,.dayBar,.bucket{border-color:#aaa;box-shadow:none}
+  .weekGrid{grid-template-columns:repeat(4,1fr)}
+  .ingredients{page-break-before:always}
+}
