@@ -31,8 +31,42 @@ async function loadMeals(){
 function pick(a){ return a[Math.floor(Math.random()*a.length)] }
 function randomDay(){ const m=new Map(); for(const mt of MEAL_ORDER){ const o=state.byType.get(mt)||[]; if(o.length) m.set(mt,pick(o)); } return m; }
 function totals(dm){ let P=0,C=0,F=0,K=0; for(const mt of MEAL_ORDER){ const it=dm.get(mt); if(!it) continue; P+=it.Protein; C+=it.Carbs; F+=it.Fat; K+=it.Kcal; } return {P,C,F,K}; }
-function persist(){ const o={}; for(const d of DAYS){ const dm=state.week.get(d); o[d]={}; for(const mt of MEAL_ORDER) o[d][mt]=dm.get(mt)?.Name||null; } localStorage.setItem('week-v5_1', JSON.stringify(o)); }
-function tryLoad(){ const raw=localStorage.getItem('week-v5_1'); if(!raw) return false; try{ const o=JSON.parse(raw); state.week=new Map(); for(const d of DAYS){ const dm=new Map(); for(const mt of MEAL_ORDER){ const name=o?.[d]?.[mt]; const found=(state.byType.get(mt)||[]).find(x=>x.Name===name) || (state.byType.get(mt)||[])[0]; if(found) dm.set(mt,found);} state.week.set(d,dm);} return true; }catch(e){ return false; } }
+//function persist(){ const o={}; for(const d of DAYS){ const dm=state.week.get(d); o[d]={}; for(const mt of MEAL_ORDER) o[d][mt]=dm.get(mt)?.Name||null; } localStorage.setItem('week-v5_1', JSON.stringify(o)); }
+async function persist() {
+  const o = {};
+  for (const d of DAYS) {
+    const dm = state.week.get(d);
+    o[d] = {};
+    for (const mt of MEAL_ORDER) o[d][mt] = dm.get(mt)?.Name || null;
+  }
+  await fetch("/api/state", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(o),
+  });
+}
+
+//function tryLoad(){ const raw=localStorage.getItem('week-v5_1'); if(!raw) return false; try{ const o=JSON.parse(raw); state.week=new Map(); for(const d of DAYS){ const dm=new Map(); for(const mt of MEAL_ORDER){ const name=o?.[d]?.[mt]; const found=(state.byType.get(mt)||[]).find(x=>x.Name===name) || (state.byType.get(mt)||[])[0]; if(found) dm.set(mt,found);} state.week.set(d,dm);} return true; }catch(e){ return false; } }
+async function tryLoad() {
+  const res = await fetch("/api/state");
+  const o = await res.json();
+  if (Object.keys(o).length) {
+    state.week = new Map();
+    for (const d of DAYS) {
+      const dm = new Map();
+      for (const mt of MEAL_ORDER) {
+        const name = o?.[d]?.[mt];
+        const found = (state.byType.get(mt) || []).find(x => x.Name === name) || (state.byType.get(mt) || [])[0];
+        if (found) dm.set(mt, found);
+      }
+      state.week.set(d, dm);
+    }
+    renderAll();
+    return true;
+  }
+  return false;
+}
+
 function regenWeek(){ state.week=new Map(); for(const d of DAYS) state.week.set(d, randomDay()); renderAll(); persist(); }
 
 function dayBar(day,T){ const pct=Math.min(100, Math.round(100*T.K/TARGET.kcalMax)); const div=document.createElement('div'); div.className='dayBar'; div.innerHTML=`<div class="head"><span>${day}</span><span>${Math.round(T.K)} kcal</span></div><div class="progress"><span style="width:${pct}%"></span></div><div class="metaRow"><span>P ${Math.round(T.P)}g</span><span>C ${Math.round(T.C)}g</span><span>F ${Math.round(T.F)}g</span></div>`; return div; }
